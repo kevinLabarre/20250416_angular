@@ -23,7 +23,7 @@ export class ProductService {
   // Une méthode getByID
 
   // A utiliser sur la page détail
-  public getById(id: number) {
+  public getById(id: string) {
     // retourne le produit ayant l'id correspondant
   }
 
@@ -36,9 +36,6 @@ export class ProductService {
   public search(text: string) {
     // Renvoie une liste de produit
   }
-
-
-
 
 
   // NE PAS FAIRE !!!

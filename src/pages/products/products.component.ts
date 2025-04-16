@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ProductService } from '../../services/product/product.service';
 
 @Component({
   selector: 'app-products',
@@ -11,7 +12,11 @@ import { Router } from '@angular/router';
 export class ProductsComponent {
   productId: number = 0;
 
-  constructor(private router: Router) { }
+  products: any[] = []
+
+  constructor(private router: Router, private service: ProductService) {
+    this.products = this.service.getProducts();
+  }
 
   goToProductDetail() {
     // this.router.navigate([`product/${this.productId}`]);
@@ -19,4 +24,3 @@ export class ProductsComponent {
   }
 
 }
-

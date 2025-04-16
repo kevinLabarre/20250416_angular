@@ -43,13 +43,11 @@ export class ProductService {
   }
 
 
-  // NE PAS FAIRE !!!
-  // Pour prochain exemple
+  // Sur page /products
   public add() {
   }
 
-  // NE PAS FAIRE !!!
-  // Pour prochain exemple
+  // Sur page 'détail' pour modifier le produit affiché
   public update() {
 
   }

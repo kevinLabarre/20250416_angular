@@ -13,6 +13,16 @@ export class LoginComponent {
     password: new FormControl("", Validators.required)
   })
 
+  constructor() {
+
+    // Le .setValue permet de modifier la valeur des champs d'nn formulaire
+    // Très utile pour pré-remplir les champs quand on fait des 'update'
+
+    // this.loginForm.setValue({
+    //   email: "email@email.fr",
+    //   password: "123456"
+    // })
+  }
 
   onSubmit() {
     // Que mes champs soient en erreur ou non, on exécutera toujours le 'submit'

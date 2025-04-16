@@ -1,0 +1,6 @@
+.activeNavButton {
+  background-color: var(--color-secondary);
+  color: var(--color-secondary-content);
+  font-weight: 500;
+  padding: 2%;
+}

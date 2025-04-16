@@ -1,0 +1,14 @@
+<!--
+<nav class="bg-neutral flex justify-center space-x-4 py-5">
+  <a class="hover:underline cursor-pointer" routerLink="/">Accueil</a>
+  <a class="hover:underline cursor-pointer" routerLink="products">Mes produits</a>
+  <a class="hover:underline cursor-pointer" routerLink="product/1">Détail</a>
+</nav>
+-->
+
+
+<nav class="bg-neutral flex justify-center space-x-4 py-5">
+  <app-nav-button [linkData]="{ routerLink: '/' , title: 'Accueil' }" />
+  <app-nav-button [linkData]="{ routerLink: 'products' , title: 'Mes produits' }" />
+  <app-nav-button [linkData]="{ routerLink: 'product/1' , title: 'Détail' }" />
+</nav>

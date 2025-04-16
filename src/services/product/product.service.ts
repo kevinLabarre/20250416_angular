@@ -20,28 +20,35 @@ export class ProductService {
     return products;
   }
 
-  // Une méthode getByID
 
-  // A utiliser sur la page détail
-  public getById(id: string) {
-    // retourne le produit ayant l'id correspondant
+  public getById(id: string): any {
+    // Le .find() nous retournera le premier produit qui remplie notre condition "product.id === id"
+    return products.find((product) => product.id === id)
   }
 
   // Rajouter un bouton de suppression sur la page /products
-  public delete(id: string) {
-    // Supprime le produit ayant l'id correspondant
+  public delete(id: string): any[] {
+    // Le .find() nous retournera l'index du premier produit qui remplie notre condition "product.id === id"
+    const productIndex = products.findIndex((product) => product.id === id)
+
+    // Le 'findIndex" renvoie -1 si aucun produit n'a rempli notre condition "product.id === id"
+    if (productIndex !== -1) {
+      products.splice(productIndex, 1)
+    }
+
+    return this.getProducts()
   }
 
   // Rajouter une input sur la page /products
-  public search(text: string) {
-    // Renvoie une liste de produit
+  public search(text: string): any[] {
+    // Le .filter renvoie une liste des produits qui remplissent notre condition 'product.title.includes(text)
+    return products.filter((product) => product.title.toLowerCase().includes(text.toLowerCase()));
   }
 
 
   // NE PAS FAIRE !!!
   // Pour prochain exemple
   public add() {
-
   }
 
   // NE PAS FAIRE !!!

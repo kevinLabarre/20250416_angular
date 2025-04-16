@@ -18,5 +18,19 @@
 
 <section class="w-4/5">
   <router-outlet />
+</section>
+
+<section class="m-5 p-5">
+  <h2>Détail de mon produit: </h2>
+  @if(product){
+  <ul>
+    <li>{{product.title}}</li>
+    <li>{{product.price}}</li>
+    <li>{{product.image}}</li>
+    <li>{{product.description}}</li>
+    <li>{{product.category}}</li>
+  </ul>
+  }@else {
+  <p class="text-red">Produit non trouvé</p>}
 
 </section>

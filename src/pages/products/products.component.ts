@@ -23,4 +23,16 @@ export class ProductsComponent {
     this.router.navigate(["/product/", this.productId]);
   }
 
+
+  delete(id: string) {
+    this.products = this.service.delete(id);
+  }
+
+  handleSearch(e: Event) {
+
+    const target = e.target as HTMLInputElement;
+
+    this.products = this.service.search(target.value)
+  }
+
 }

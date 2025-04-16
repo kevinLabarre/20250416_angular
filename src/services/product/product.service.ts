@@ -28,7 +28,7 @@ export class ProductService {
   }
 
   // Rajouter un bouton de suppression sur la page /products
-  public delete(id: number) {
+  public delete(id: string) {
     // Supprime le produit ayant l'id correspondant
   }
 

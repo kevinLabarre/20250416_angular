@@ -4,6 +4,7 @@ import { ProductDetailComponent } from '../pages/product-detail/product-detail.c
 import { DescriptionComponent } from '../components/description/description.component';
 import { FicheTechComponent } from '../components/fiche-tech/fiche-tech.component';
 import { DevisComponent } from '../components/devis/devis.component';
+import { LoginComponent } from '../pages/login/login.component';
 
 export const routes: Routes = [
   { path: '', component: ProductsComponent },
@@ -17,4 +18,5 @@ export const routes: Routes = [
       { path: 'devis', component: DevisComponent }
     ]
   },
+  { path: 'login', component: LoginComponent },
 ];

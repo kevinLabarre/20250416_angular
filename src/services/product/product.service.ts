@@ -6,11 +6,9 @@ import { products } from '../../../productsDB';
 })
 export class ProductService {
 
-
   // Les méthode couremment utilisées sur les framework
   //  -> .map()
   //  -> .filter()
-
 
   // On travaille sur l'import 'productsDB.ts' (voir les imports réalisés au-dessus)
 
@@ -19,7 +17,6 @@ export class ProductService {
   public getProducts() {
     return products;
   }
-
 
   public getById(id: string): any {
     // Le .find() nous retournera le premier produit qui remplie notre condition "product.id === id"

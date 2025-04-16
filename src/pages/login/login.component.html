@@ -1,0 +1,30 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+  <div class=" w-fit grid grid-cols-2 gap-4">
+
+    <div>
+      <label for="email">
+        Email:
+        <input class="input" type="email" formControlName="email">
+      </label>
+      @if(emailErrors && emailTouched) {
+      @if(emailRequired){
+      Votre email est OBLIGATOIRE !
+      } @else {
+      Mauvais format d'adresse mail !}
+      }
+    </div>
+    <div>
+      <label for="password">
+        Mot de passe:
+        <input class="input" type="password" formControlName="password">
+      </label>
+    </div>
+
+  </div>
+
+
+
+
+  <button class="btn">Se connecter</button>
+</form>

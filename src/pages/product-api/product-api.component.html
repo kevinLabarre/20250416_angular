@@ -1,1 +1,18 @@
-<p>product-api works!</p>
+<section class="border m-2 p-5">
+  <ul>
+    @for(product of products; track product.id){
+    <li>id: {{product.id}}</li>
+    <li>
+      {{product.title}}
+    </li>
+    <li>{{product.price}}</li>
+    <li>{{product.image}}</li>
+    <li>{{product.description}}</li>
+    <li>{{product.slug}}</li>
+    <li>{{product.category}}</li>
+    <br>
+    } @empty {
+    <p>Chargement ...... </p>
+    }
+  </ul>
+</section>

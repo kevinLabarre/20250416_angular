@@ -6,6 +6,7 @@ import { FicheTechComponent } from '../components/fiche-tech/fiche-tech.componen
 import { DevisComponent } from '../components/devis/devis.component';
 import { LoginComponent } from '../pages/login/login.component';
 import { ProductApiComponent } from '../pages/product-api/product-api.component';
+import { PokedexComponent } from '../pages/pokedex/pokedex.component';
 
 export const routes: Routes = [
   { path: '', component: ProductsComponent },
@@ -20,5 +21,6 @@ export const routes: Routes = [
       { path: 'devis', component: DevisComponent },
     ]
   },
+  { path: 'pokedex', component: PokedexComponent },
   { path: 'login', component: LoginComponent },
 ];

@@ -1,0 +1,21 @@
+@if(pokemon){
+<div class="card card-compact bg-base-100 shadow-xl h-80">
+  <figure>
+    <img src="{{ pokemon.sprites.front_default }}" alt="image de {{ pokemon.name }}" class="h-40 w-full object-cover" />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title capitalize">{{ pokemon.name }}</h2>
+    <p class="badge badge-secondary">{{ pokemon.id }}</p>
+    <div class="flex flex-wrap gap-2 my-2">
+      @for(type of pokemon.types; track type.type.name){
+      <span class="badge badge-outline">{{ type.type.name }}</span>
+      }
+
+    </div>
+    <div class="flex justify-between items-center">
+      <p class="text-sm">Taille: {{ pokemon.height }} dm</p>
+      <p class="text-sm">Poids: {{ pokemon.weight }} hg</p>
+    </div>
+  </div>
+</div>
+}

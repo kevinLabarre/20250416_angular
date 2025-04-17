@@ -1,0 +1,18 @@
+<h1>Pokedex</h1>
+<!--SOLUTION 1-->
+<section class="m-2 border mb-5">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5 p-5">
+    @for(pokemon of pokemons; track pokemon.url){
+    <app-pokemon-card [resumePokemon]="pokemon" />
+    }
+  </div>
+</section>
+
+<!--SOLUTION 2-->
+<section class="m-2 border ">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5 p-5">
+    @for(pokemon of fullPokemons; track pokemon.id){
+    <app-pokemon-card2 [pokemon]="pokemon" />
+    }
+  </div>
+</section>

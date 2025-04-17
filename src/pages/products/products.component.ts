@@ -3,10 +3,11 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { Router } from '@angular/router';
 import { ProductService } from '../../services/product/product.service';
 import { title } from 'node:process';
+import { PrductFormComponent } from "../../components/prduct-form/prduct-form.component";
 
 @Component({
   selector: 'app-products',
-  imports: [FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule, PrductFormComponent],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
@@ -15,20 +16,9 @@ export class ProductsComponent {
 
   products: any[] = []
 
-  productForm: FormGroup;
-
 
   constructor(private router: Router, private service: ProductService) {
     this.products = this.service.getProducts();
-
-    this.productForm = new FormGroup({
-      title: new FormControl('', [Validators.required, Validators.maxLength(20)]),
-      price: new FormControl('', [Validators.required, Validators.min(0)]),
-      image: new FormControl(''),
-      description: new FormControl('', Validators.required),
-      slug: new FormControl('', Validators.required),
-      category: new FormControl(''),
-    });
   }
 
   goToProductDetail() {
@@ -45,10 +35,4 @@ export class ProductsComponent {
     const target = e.target as HTMLInputElement;
     this.products = this.service.search(target.value)
   }
-
-  handleAddProduct() {
-    this.service.add(this.productForm.value);
-    this.productForm.reset();
-  }
-
 }

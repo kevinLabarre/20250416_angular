@@ -21,51 +21,5 @@
     <p>Chargement ...... </p>
     }
   </ul>
-
-
-
-
-  <section>
-    <form [formGroup]="productForm" (ngSubmit)="handleAddProduct()" class="form-control w-1/2 mx-auto">
-      <fieldset class="fieldset">
-        <legend class="fieldset-legend">Product Details</legend>
-
-        <label class="label">
-          <span class="label-text">Title</span>
-        </label>
-        <input type="text" placeholder="Title" formControlName="title" class="input input-bordered w-full" />
-
-        <label class="label">
-          <span class="label-text">Price</span>
-        </label>
-        <input type="number" placeholder="Price" formControlName="price" class="input input-bordered w-full " />
-
-        <label class="label">
-          <span class="label-text">Image URL</span>
-        </label>
-        <input type="text" placeholder="Image URL" formControlName="image" class="input input-bordered w-full" />
-
-        <label class="label">
-          <span class="label-text">Description</span>
-        </label>
-        <textarea placeholder="Description" formControlName="description"
-          class="input input-bordered w-full"></textarea>
-
-        <label class="label">
-          <span class="label-text">Slug</span>
-        </label>
-        <input type="text" placeholder="Slug" formControlName="slug" class="input input-bordered w-full" />
-
-        <label class="label">
-          <span class="label-text">Category</span>
-        </label>
-        <input type="text" placeholder="Category" formControlName="category" class="input input-bordered w-full" />
-
-        <button type="submit" class="btn btn-warning mt-4">Ajouter / modifier le produit</button>
-      </fieldset>
-    </form>
-
-  </section>
-
-
+  <app-prduct-form />
 </section>

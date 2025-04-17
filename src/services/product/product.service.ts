@@ -54,7 +54,7 @@ export class ProductService {
     const updateProductIndex = products.findIndex(p => p.id === product.id);
     if (updateProductIndex !== -1) {
       products.splice(updateProductIndex, 1, product)
-      return products;
+      return product;
     } else {
       console.error("Erreur lors de la mise à jour du produit");
       return;

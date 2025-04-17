@@ -44,13 +44,21 @@ export class ProductService {
 
 
   // Sur page /products
-  public add() {
+  public add(product: any): any[] {
+    products.push(product);
+    return this.getProducts();
   }
 
   // Sur page 'détail' pour modifier le produit affiché
-  public update() {
-
+  public update(product: any) {
+    const updateProductIndex = products.findIndex(p => p.id === product.id);
+    if (updateProductIndex !== -1) {
+      products.splice(updateProductIndex, 1, product)
+      return products;
+    } else {
+      console.error("Erreur lors de la mise à jour du produit");
+      return;
+    }
   }
-
 
 }

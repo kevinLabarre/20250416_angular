@@ -11,8 +11,8 @@
     },
     {
       "id": "2",
-      "title": "PlayStation 5",
-      "price": 500,
+      "title": "PlayStation",
+      "price": 300,
       "image": "https://imgs.search.brave.com/5vHwQ_AmxozeHhs093xwyx2KQWHjB0SlsaxbxNrpT54/rs:fit:1200:750:1/g:ce/aHR0cHM6Ly9pbWcu/cGhvbmFuZHJvaWQu/Y29tLzIwMjEvMDIv/cHM1LWJ1Zy1ldHJh/bmdlLWluc3RhbGxh/dGlvbi5qcGc",
       "description": "La PlayStation 5 est une console de jeux vidéo de salon développée par Sony Interactive Entertainment.",
       "slug": "playstation-5",

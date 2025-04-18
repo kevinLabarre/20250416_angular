@@ -1,0 +1,9 @@
+<section>
+  <h1>Cycle de vie</h1>
+  <p>value: {{value}}</p>
+  <br>
+  <button (click)="increment()" class="btn"> + 1</button>
+
+  <app-lifecycle-children [value]="value" (upadateParentValue)="updateValue($event)" />
+
+</section>

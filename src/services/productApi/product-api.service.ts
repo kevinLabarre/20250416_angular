@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IProduct } from '../../interfaces/IProduct';
+import { IProductPaginate } from '../../interfaces/IProductPaginate';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,18 @@ export class ProductApiService {
 
   getProducts(): Observable<IProduct[]> {
     return this.http.get<IProduct[]>(this.baseUrl)
+  }
+
+  getProductById(id: string): Observable<IProduct> {
+    return this.http.get<IProduct>(`${this.baseUrl}/${id}`)
+  }
+
+  updateProduct(product: IProduct): Observable<IProduct> {
+    return this.http.put<IProduct>(`${this.baseUrl}/${product.id}`, product)
+  }
+
+  getPaginatedProducts(page: number, limit: number): Observable<IProductPaginate> {
+    return this.http.get<IProductPaginate>(`${this.baseUrl}?_page=${page}&_per_page=${limit}`)
   }
 
 }

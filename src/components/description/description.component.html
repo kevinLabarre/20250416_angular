@@ -1,1 +1,13 @@
-<p>description works!</p>
+<section>
+  <form [formGroup]="updateProductForm" (ngSubmit)="onSubmit()" class="form-control w-1/2 mx-auto">
+    <fieldset class="fieldset">
+      <legend class="fieldset-legend">Product Details</legend>
+      <label class="label">
+        <span class="label-text">Description</span>
+      </label>
+      <textarea placeholder="Description" formControlName="description" class="input input-bordered w-full"></textarea>
+      <button type="submit" class="btn btn-warning mt-4">Ajouter / modifier le produit</button>
+    </fieldset>
+  </form>
+
+</section>
